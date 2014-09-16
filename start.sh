@@ -4,4 +4,10 @@
 #
 # author: hzsunshx 2014-09-16
 #
-echo "Hello"
+daemon(){
+	"$@" &>/dev/null &
+}
+
+daemon /usr/sbin/ssdh -D
+daemon python rpc_service.py
+echo "Hello sshd"
