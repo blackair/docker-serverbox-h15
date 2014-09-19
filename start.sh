@@ -8,6 +8,6 @@ daemon(){
 	"$@" &>/dev/null &
 }
 
-daemon /usr/sbin/ssdh -D
+daemon /usr/sbin/sshd -D
 daemon python rpc_service.py
 echo "Hello sshd"
