@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y python openssh-server
 RUN apt-get install -y python-pip python-setuptools
 
 # pymongo
-RUN apt-get install -y build-essential python-dev
+RUN apt-get install -y build-essential python-dev vim
 RUN easy_install pymongo
 
 # ssh
