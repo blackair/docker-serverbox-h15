@@ -9,5 +9,6 @@ daemon(){
 }
 
 daemon /usr/sbin/sshd -D
-daemon python rpc_service.py
-echo "Hello sshd"
+daemon socklog
+
+exec "$@"

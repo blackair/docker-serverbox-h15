@@ -7,7 +7,7 @@ RUN apt-get install -y python-pip python-setuptools
 RUN apt-get install -y build-essential python-dev 
 
 # nessary stuff
-RUN apt-get install -y vim
+RUN apt-get install -y vim socklog-sh
 
 # pymongo
 RUN easy_install pymongo
@@ -25,9 +25,9 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 # -- end ssh
 
 ADD start.sh /
-ADD rpc_service.py /
+RUN chmod +x start.sh
 
 #EXPOSE 22
 #EXPOSE 4000 8000
 
-CMD ["/start.sh"]
+ENTRYPOINT ["/start.sh"]
