@@ -7,7 +7,7 @@ RUN apt-get install -y python-pip python-setuptools
 RUN apt-get install -y build-essential python-dev 
 
 # nessary stuff
-RUN apt-get install -y vim socklog-sh
+RUN apt-get install -y vim socklog-run
 
 # pymongo
 RUN easy_install pymongo
