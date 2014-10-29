@@ -1,5 +1,4 @@
 FROM	mongo:2.6.4
-MAINTAINER hzsunshx@corp.netease.com
 
 RUN apt-get update && apt-get install -y python openssh-server
 RUN apt-get install -y python-pip python-setuptools
